@@ -7,6 +7,7 @@ body {
     line-height: 1.6;
 }
 
+/*JUDUL*/
 h1,
 h2,
 h3 {
@@ -15,33 +16,41 @@ h3 {
 h1 {
     text-align: center;
     background-color: #dfeaf5;
-    padding: 20px;
+    padding: 25px;
     margin: 0;
+    border-radius: 0 0 15px rgba(0, 0, 0, 0.137);
 }
 h2{
     margin-top: 25px;
     margin-bottom: 15px;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
 }
 h3{
     margin-top: 20px;
 }
 
+/*NAVIGASI*/
 nav{
     display: flex;
     justify-content: center;
     gap: 20px;
     background-color: #2c3e50;
     padding: 15px;
+    border-radius: 0 0 10px 10px;
 }
 nav a{
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 nav a:hover{
     color: #f1c40f;
+    transform: translateY(-2px);
 }
 
+/*ISI HALAMAN*/
 p,
 ul,
 ol,
@@ -56,23 +65,34 @@ p{
 
 a{
     color: #2980b9;
+    transition: 0.3s;
 }
-a:hove{
+a:hover{
     color: #c0392b;
 }
 
+/*GAMBAR*/
 img{
     max-width: 100%;
     height: auto;
     border: 2px solid #dddddd;
     border-radius: 10px;
     margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.123);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.219);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/*LIST*/
 li{
     margin-bottom: 5px;
 }
 
+/*TABLE*/
 table{
     width: 80%;
     border-collapse: collapse;
@@ -89,37 +109,55 @@ td{
     padding: 10px;
     text-align: left;
 }
+th{
+    background-color: #eef4f9;
+}
 
+/*FORM*/
 .input input{
     width: 90%;
     padding: 8px;
 border: 1px solid #aaaaaa;
 border-radius: 5px;
 }
+input,
+select,
+textarea{
+    padding: 7px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+}
 
+/*BUTTON*/
 button{
     padding: 8px 15px;
     margin: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 button:hover{
     opacity: 0.8;
+    background-color: #2c3e50;
+    color: white;transform: translateY(-2px);
 }
 
+/*GARIS*/
 hr{
     border: none;
     border-top: 2px solid #d0d7de;
     margin: 25px 8%;
 }
 
+/*FOOTER*/
 footer{
     margin-top: 40px;
     padding: 15px;
     text-align: center;
     background-color: #2c3e50;
     color: white;
+    border-radius: 10px 10px 0 0;
 }
 footer p{
     margin: 0;
@@ -139,12 +177,4 @@ h1{
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/*Animasi Gambar*/
-img{
-    transition: transform 0.3s ease;
-}
-img:hover{
-    transform: scale(1.03);
 }
